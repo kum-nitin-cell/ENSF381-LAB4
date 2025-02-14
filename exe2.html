@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab4- Exercise 1</title>
+    </head>
+    <body>
+        <h1>Javascript Lab</h1>
+        <Script>
+                
+                
+                function add(num1, num2)
+                {
+                    return num1+num2;
+                }
+
+                function subtract(num1,num2)
+                {
+                    if (num1>num2){
+                        return num1-num2;
+                    }else{
+                        return num2-num1;
+                    }
+                }
+
+                console.log(add(3,5));
+                console.log(subtract(4,2))
+                console.log(subtract(2,4))
+                
+                
+
+                // Using Default Parameters
+
+                function add(num1, num2=0)
+                {
+                    return num1+num2;
+                }
+
+                function subtract(num1,num2=0)
+                {
+                    return num1-num2;
+                }
+
+                console.log(add(3));
+                console.log(subtract(4))
+                
+                /* 
+                Please comment out the above functions for running the callback functions since
+                there are multiple implementations of same functions.
+                */
+
+                // Implementing Arrow Functions
+
+                let add=(x,y)=>x+y;
+                let subtract=(x,y)=>x-y;
+
+                let multiply=(x,y)=>x*y;
+                let divide = (x,y)=> {
+                    if(y==0){
+                        return "Can't divide by Zero"}else{
+                            return x/y};
+                        }
+
+
+                function calculator(num1,num2,callback){
+                    let x=num1;
+                    let y=num2;
+                    return callback(x,y);
+                }
+                // callback will call the  required functions from above under implementing arrow function
+                // return result.
+
+                /*
+                 test purposes only
+                console.log(calculator(1,2, add))
+                console.log(calculator(3,0,divide))
+                console.log(calculator(2,3,multiply))
+                */
+
+        </Script>
+    </body>
+</html>
