@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab4- Exercise 1</title>
+    </head>
+    <body>
+        <h1>Javascript Lab</h1>
+        <Script>
+            //Declare an array named classRoster
+            let classRoster=["Alice", "Tom","Charlie", "Diana", "Evan"];
+
+            //toString method
+            let string1 =classRoster.toString()
+            console.log(string1)
+
+            //checking original array.
+            console.log(classRoster)
+
+            // using pushback method
+            classRoster.push("Fiona","Nancy");
+            console.log(classRoster)
+
+            // using shift method
+            classRoster.shift()
+
+            // updated array
+            console.log(classRoster);
+
+            // length of the array
+            console.log(classRoster.length)
+
+            /*
+            Objects with Nested Structures
+            */
+
+            let classInfo={
+                className:'ENSF381: Full-Stack Web Development',
+                instructor:'Dr. Smith',
+                students: classRoster,
+                details:{
+                    semester: 'Winter',
+                    year: 2025
+                },
+                schedule: ["Monday", "Wednesday", "Friday"],
+            }
+            
+            // updating the instructor name
+            classInfo.instructor="Dr. Deb";
+
+            // printing the output
+            console.log(classInfo.className);
+            console.log(classInfo.instructor);
+            console.log(classInfo.students);
+            console.log(classInfo.details.semester);
+            console.log(classInfo);
+
+            // Destructuring
+            let {className,students}=classInfo;
+            console.log(className);
+            console.log(students);
+
+            let {details:{semester, year}} = classInfo;
+            console.log(semester);
+            console.log(year);
+
+            let [student1,student2,...remainingstudents]=classRoster;
+            console.log(student1);
+            console.log(student2);
+            console.log(remainingstudents);
+
+
+            
+
+
+        </Script>
+    </body>
+</html>
