@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab4- Exercise 1</title>
+    </head>
+    <body>
+        <h1>Javascript Lab</h1>
+        <Script>
+                let num1=5;
+                let num2=8;
+                const num3 = 22;
+                console.log(num1)
+            
+                num1 = 15;
+                console.log(num1)
+
+                /*
+                num3 = 56;
+                console.log(num3)    
+                
+                Following Error inocurred: Uncaught TypeError: Assignment to constant variable.
+                */
+            
+
+                // String operations
+
+                let string1 = "Hello, World!";
+                let string2 = "JavaScript is fun!";
+
+                console.log(string1.length)
+
+                let string3= string1+ '.' + string2;
+                console.log(string3)
+
+                let newstring2= string2.replace("fun","awesome");
+                console.log(newstring2)
+
+
+                // String template
+
+                let name ="Alice";
+                let age = 25;
+                let string =`My name is ${name} and I am ${age} years old`;
+                console.log(string)
+
+
+                // Working with Dates 
+                //sourece: https://www.w3schools.com/js/js_date_methods.asp
+
+                const date= new Date();
+                console.log(date)
+
+                console.log(date.getFullYear())
+
+                // months are predefined from 0-11.Have to add 1 to get actual month.
+                console.log(date.getMonth()+1);
+
+                //day of the week as a number (e.g., 1 for Monday)
+                console.log(date.getDay())
+
+                // Convert the day of the week to its name (e.g., “Monday”).
+                const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                let day = days[date.getDay()]
+
+                console.log(day);
+
+
+
+        </Script>
+    </body>
+</html>
